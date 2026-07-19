@@ -1,16 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 h1{
     text-align: center;
     font-size: 300%;
     font-family: monospace;
     color: #a855f7;
     margin: 1rem;
+    text-shadow: 2px 2px 0 #3d1e5a;
 }
-body{
+html {
     background-color: #121212;
+}
+
+body{
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    min-height: 100vh;
 }  
 .question {
     font-style: italic;
@@ -27,15 +40,21 @@ body{
     margin: 1rem;
 }
 .item-question{
-    display: flex;
     font-family: monospace;
-    justify-content: space-between;
-    align-items: center;
     font-size: 1.2rem;
-    padding: 1rem;
     background-color: #1e1a24;
     color: #4ade80;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.2s ease;
+}
+.item-question:hover {
+    background-color: #2a2433;
 }
 .arrow-icon {
     transition: transform 0.3s ease;
@@ -45,20 +64,24 @@ body{
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s ease-out;
-    overflow: hidden;
     background-color: #3d364a;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
 }
 .item-answer{
+    display: flex;
+    flex-direction: column;
     min-height: 0;
     color: #e2e8f0;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
     transition: padding 0.3s ease;
+    line-height: 1.6;
 }
 .show-answer .answer-wrapper {
     grid-template-rows: 1fr;
 }
 .show-answer .item-answer {
-    padding: 1rem;
+    padding: 1rem 1.25rem;
 }
 .show-answer .arrow-icon {
     transform: rotate(180deg);
@@ -66,4 +89,27 @@ body{
 
 .centerBig{
     text-align: center;
+}
+
+#fluid-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    display: block;
+}
+
+.content{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
 }
