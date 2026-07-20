@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SirBanditDook.dev</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="SirBanditDook.dev">
     <meta property="og:description" content="My website to test stuff and look alive sooo come visit!">
     <meta property="og:type" content="website">
@@ -15,22 +13,9 @@
     <meta property="og:image:height" content="1200">
     <meta name="twitter:card" content="summary_large_image"/>
     <meta property="theme-color" content="#AF56E1">
-
-
   </head>
-
   <body>
-  <canvas id="fluid-canvas"></canvas>
-
-  <main class="content">
-    <div class="header">
-      <h1>My name is SirBanditDook (kinda) and Welcome!</h1>
-    </div>
-    <br>
-      <div id="faqs-container"></div>
-      <script src="FAQ adder.js"></script>
-  </main>
-
-  <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
