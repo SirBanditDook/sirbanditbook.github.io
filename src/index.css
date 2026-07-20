@@ -49,7 +49,7 @@ body {
     align-items: center;
     padding: 0.75rem 1.25rem;
     width: 100%;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 8px 8px;
     transition: background-color 0.2s ease;
 }
 .item-question:hover {
@@ -84,6 +84,9 @@ body {
 }
 .show-answer .arrow-icon {
     transform: rotate(180deg);
+}
+.show-answer .item-question{
+    border-radius: 8px 8px 0 0;
 }
 
 .centerBig{

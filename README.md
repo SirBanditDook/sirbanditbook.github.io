@@ -1,3 +1,16 @@
 # sirbanditdook.github.io
 
-I'm just trying to make a website dude idk
+A React project built with Vite.
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
